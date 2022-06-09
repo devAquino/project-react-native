@@ -13,7 +13,10 @@ import { ExcluirAssunto } from './src/screens/assuntos/ExcluirAssunto';
 import { ListarAssunto } from './src/screens/assuntos/ListarAssunto';
 import { ListarEncontro } from './src/screens/encontros/ListarEncontro';
 
+
 const Stack = createStackNavigator();
+
+
 
 export default function App() {
   return (
