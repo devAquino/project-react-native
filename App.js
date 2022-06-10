@@ -1,9 +1,6 @@
-
-import {createStackNavigator} from '@react-navigation/stack'
-import {NavigationContainer} from '@react-navigation/native'
-import 'react-native-gesture-handler'
-
-import { Login } from './src/screens/login/Login';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+import 'react-native-gesture-handler';
 
 import NavigationTab from './src/screens/navigationtab/NavigationTab';
 import { CadastrarAssunto } from './src/screens/assuntos/CadastrarAssunto';
@@ -13,14 +10,12 @@ import { ExcluirAssunto } from './src/screens/assuntos/ExcluirAssunto';
 import { ListarAssunto } from './src/screens/assuntos/ListarAssunto';
 import { ListarEncontro } from './src/screens/encontros/ListarEncontro';
 
+import { Login } from './src/screens/login/Login';
 
 const Stack = createStackNavigator();
 
-
-
 export default function App() {
-  return (
-    
+  return (    
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} />
@@ -41,4 +36,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
