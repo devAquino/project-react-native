@@ -6,7 +6,7 @@ import api from "../../service/api";
 
 function ListarEncontro(){
     
-    const [encontro, setEncontro] = useState([]);
+    const [encontros, setEncontro] = useState([]);
 
     useEffect(()=>{
         api.get('encontros').then(({data})=>{
@@ -14,22 +14,20 @@ function ListarEncontro(){
         });
 
     },[])
-    // const encontros = [
-    //     {dat:"21/05/2022"},
-    //     {dat:"25/05/2022"}
-
-    // ]
+   
     return (
         <View style={styles.containerForm}>
-            <Text>Listar Encontros</Text>
-            {/* <FlatList
+            
+            <FlatList 
+                
                 data={encontros}
-                keyExtractor={item => item.}
-                renderItem={({item}) =><View><Text>{item.dat}</Text></View>}
-            /> */}
-            {encontro.map(item =>(
-                <Text>{item.name}</Text>
-            ))}
+                keyExtractor={item => item.id}
+                renderItem={({item}) =>
+                <View style={styles.encontro}>
+                    <Text style={styles.textEncontro}>{item.date}</Text>
+                </View>}
+            />
+           
         </View>
     )
 }

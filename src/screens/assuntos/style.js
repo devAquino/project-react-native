@@ -31,6 +31,20 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 22,
         fontWeight: 'bold'
+    },
+    assunto:{
+        backgroundColor: "#AE3BF8",
+        marginTop: 15,
+        width: 300,
+        height: 45,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 10,
+    },
+    textAssunto:{
+        color: "white",
+        fontWeight: "bold",
+        fontSize: 20,
     }
    
 })

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { TextInput, View, Text, TouchableOpacity} from "react-native";
 
 import {stylesLogin} from "./style";
@@ -9,6 +9,16 @@ function Login({navigation}){
 
     const fazerLogin = () =>{
        
+        const [phone, setPhone] = useState("");
+        const [senha, setSenha] = useState('');
+
+        useEffect(()=>{
+          api.get('login').then(({data})=>{
+              setEncontro(data)
+          });
+  
+      },[])
+
         navigation.dispatch(
             CommonActions.reset({
               index: 1,
