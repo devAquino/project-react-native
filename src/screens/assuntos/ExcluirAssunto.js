@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { TextInput } from "react-native-gesture-handler";
 import { TouchableOpacity, View, Text } from "react-native";
 
 import { TitleHead } from "../header/TitleHead";
 import { styles } from "./style";
+import api from "../../service/api";
 
 function ExcluirAssunto(){
+
+    const [assunto, setAssunto] = useState("");
+
+    const delAssunto = () =>{
+        api.delete('assunto/delete/:id').then((res)=>{
+            setAssunto(assunto)
+        })
+    }
+
     return (
         <View >
             <View >

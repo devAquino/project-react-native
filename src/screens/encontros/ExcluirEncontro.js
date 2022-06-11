@@ -6,6 +6,15 @@ import { TitleHead } from "../header/TitleHead";
 
 
 function ExcluirEncontro(){
+
+    const [encontro, setEncontro] = useState("");
+
+    const delEncontro = () =>{
+        api.delete('encontro/delete/:id').then((res)=>{
+            setEncontro(encontro)
+        })
+    }
+    
     return (
         <View >
             <View >
