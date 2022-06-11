@@ -6,6 +6,15 @@ import { TitleHead } from "../header/TitleHead";
 
 
 function ExcluirEncontro(){
+
+    const [encontro, setEncontro] = useState("");
+
+    const delEncontro = () =>{
+        api.delete('encontro/delete/:id').then((res)=>{
+            setEncontro(encontro)
+        })
+    }
+
     return (
         <View >
             <View >
@@ -24,7 +33,8 @@ function ExcluirEncontro(){
                         alignItems:'center',
                         justifyContent: 'center',
                         borderRadius: 20,
-                    }}>
+                    }}
+                    onPress={delEncontro}>
                     <Text style={styles.textButton}>Excluir</Text>
                 </TouchableOpacity>
             </View>

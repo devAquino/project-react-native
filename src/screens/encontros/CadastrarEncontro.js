@@ -15,17 +15,14 @@ function CadastrarEncontro(){
     
     const [encontro, setEncontro] = useState('');
 
-    // useEffect(()=>{
-    //     api.get('encontro/cadastrar').then(({data})=>{
-    //         setEncontro(data)
-    //     });
+    const postEncontro = (e)=>{
+        api.post('assunto/cadastrar',{
+            encontro,
+            
+        }).then(res => renderOutput(res))
+    }
 
-    // },[]);
-    // const BasicUsage = () => {
-    //     const [selectedDate, setSelectedDate] = useState('');
-      
-    // };
-
+   
     return (
         <View >
             <View >
@@ -47,7 +44,8 @@ function CadastrarEncontro(){
                         alignItems:'center',
                         justifyContent: 'center',
                         borderRadius: 20,
-                    }}>
+                    }}
+                    onPress={postEncontro}>
                     <Text style={styles.textButton}>Salvar</Text>
                 </TouchableOpacity>
             </View>

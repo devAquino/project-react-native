@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 6,
         paddingHorizontal: 10,
-        marginTop: 60, 
+        marginTop: 0, 
         marginBottom:20,
     },
     excluirButton:{

@@ -8,16 +8,6 @@ import { CommonActions } from '@react-navigation/native';
 function Login({navigation}){
 
     const fazerLogin = () =>{
-       
-        const [phone, setPhone] = useState("");
-        const [senha, setSenha] = useState('');
-
-        useEffect(()=>{
-          api.get('login').then(({data})=>{
-              setEncontro(data)
-          });
-  
-      },[])
 
         navigation.dispatch(
             CommonActions.reset({
